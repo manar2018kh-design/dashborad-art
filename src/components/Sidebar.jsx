@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import { IoHomeOutline, IoPeople } from "react-icons/io5";
@@ -7,15 +8,15 @@ import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import { RiArtboardLine } from "react-icons/ri";
 import m from "../assets/img/m.png";
 
-function Sidebar({ activePage, onPageChange, onLogout }) {
+function Sidebar({ onLogout }) {
   const navItems = [
-    { id: "dashboard", label: "Dashboard", icon: <IoHomeOutline /> },
-    { id: "product", label: "Product", icon: <ProductionQuantityLimitsIcon /> },
-    { id: "customers", label: "Customers", icon: <IoPeople /> },
-    { id: "orders", label: "Orders", icon: <LuBox /> },
-    { id: "api", label: "Art Api", icon: <RiArtboardLine /> },
-    { id: "analytics", label: "Analytics", icon: <TbBrandGoogleAnalytics /> },
-    { id: "settings", label: "Settings", icon: <SettingsSuggestIcon /> },
+    { path: "/", label: "Dashboard", icon: <IoHomeOutline /> },
+    { path: "/products", label: "Product", icon: <ProductionQuantityLimitsIcon /> },
+    { path: "/customers", label: "Customers", icon: <IoPeople /> },
+    { path: "/orders", label: "Orders", icon: <LuBox /> },
+    { path: "/api", label: "Art Api", icon: <RiArtboardLine /> },
+    { path: "/analytics", label: "Analytics", icon: <TbBrandGoogleAnalytics /> },
+    { path: "/settings", label: "Settings", icon: <SettingsSuggestIcon /> },
   ];
 
   return (
@@ -28,13 +29,16 @@ function Sidebar({ activePage, onPageChange, onLogout }) {
 
       <ul className="nav-list">
         {navItems.map((item) => (
-          <li
-            key={item.id}
-            className={`nav-item ${activePage === item.id ? "active" : ""}`}
-            onClick={() => onPageChange(item.id)}
+          <NavLink
+            key={item.path}
+            to={item.path}
+            end
+            className={({ isActive }) =>
+              `nav-item ${isActive ? "active" : ""}`
+            }
           >
             {item.icon} {item.label}
-          </li>
+          </NavLink>
         ))}
 
         <li className="nav-item logout" onClick={onLogout}>
