@@ -269,15 +269,16 @@ export const artData = [
   }
 ];
 export const salesData = [
-  { month: "Jan", revenue: 12400, orders: 24, visitors: 3200 },
-  { month: "Feb", revenue: 15800, orders: 32, visitors: 4100 },
-  { month: "Mar", revenue: 18200, orders: 38, visitors: 4800 },
-  { month: "Apr", revenue: 14500, orders: 28, visitors: 3900 },
-  { month: "May", revenue: 21000, orders: 45, visitors: 5600 },
-  { month: "Jun", revenue: 24800, orders: 52, visitors: 6200 },
-  { month: "Jul", revenue: 28500, orders: 58, visitors: 7100 },
-  { month: "Aug", revenue: 32000, orders: 65, visitors: 8200 },
+  { month: "Jan", revenue: 1250000, orders: 14, visitors: 4200 },
+  { month: "Feb", revenue: 1800000, orders: 19, visitors: 5100 },
+  { month: "Mar", revenue: 2400000, orders: 23, visitors: 6300 },
+  { month: "Apr", revenue: 1650000, orders: 17, visitors: 4800 },
+  { month: "May", revenue: 3100000, orders: 28, visitors: 7200 },
+  { month: "Jun", revenue: 3850000, orders: 32, visitors: 8100 },
+  { month: "Jul", revenue: 4600000, orders: 38, visitors: 9300 },
+  { month: "Aug", revenue: 5500000, orders: 44, visitors: 10800 },
 ];
+
 
 export const categoryData = [
   { name: "Riyadh", count: 35, color: "#8884d8" },
