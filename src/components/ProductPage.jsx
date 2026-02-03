@@ -1,9 +1,10 @@
 import { useState } from "react";
-
 function ProductPage({ products, setProducts }) {
   const [formData, setFormData] = useState({ name: "", artistName: "", price: "", stock: "", image: "" });
   const [showForm, setShowForm] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState("all");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -69,6 +70,21 @@ function ProductPage({ products, setProducts }) {
     setShowForm(false);
   };
 
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch =
+      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.artistName.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesStatus =
+      statusFilter === "all"
+        ? true
+        : statusFilter === "active"
+        ? product.active
+        : !product.active;
+
+    return matchesSearch && matchesStatus;
+  });
+
   return (
     <>
       {showForm && (
@@ -111,6 +127,25 @@ function ProductPage({ products, setProducts }) {
         <button className="btn-add" onClick={openAddForm}>Add Product +</button>
       </div>
 
+      <div className="filter-bar">
+        <input
+          type="text"
+          placeholder="Search by title or artist..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+        <select
+          value={statusFilter}
+          onChange={(e) => setStatusFilter(e.target.value)}
+          className="filter-select"
+        >
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="inactive">Out Of Stock</option>
+        </select>
+      </div>
+
       <table className="table">
         <thead>
           <tr>
@@ -124,7 +159,7 @@ function ProductPage({ products, setProducts }) {
           </tr>
         </thead>
         <tbody>
-          {products.map((item) => (
+          {filteredProducts.map((item) => (
             <tr key={item.id}>
               <td><img src={item.image || "default.jpg"} alt={item.name} style={{ width: "100px", height: "100px", objectFit: "cover" }} /></td>
               <td>{item.name}</td>
