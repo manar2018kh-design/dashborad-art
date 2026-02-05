@@ -1758,55 +1758,41 @@ body.dark-mode .table th {
 .view-btn:hover {
   color: #4E1F00;
 }
-
-.badge {
-  padding: 0.4rem 0.9rem;
+.order-status-buttons .status-btn {
+  padding: 0.7rem 1.6rem;
   border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  display: inline-block;
-}
-
-
-
-
-.badge.active {
-  background-color: #d1f7e5;
-  color: #0f5132;
-}
-
-.badge.inactive {
-  background-color: #f8d7da;
-  color: #842029;
-}
-.active-selected {
-  box-shadow: 0 0 0 3px #000;
-  transform: scale(1.05);
-  opacity: 1 !important;
-}
-.badge.pending {
-  background-color: #fff3cd;
-  color: #856404;
-  border: 2px solid #e6c965;
-}
-
-.badge.active {
-  background-color: #d1f7e5;
-  color: #0f5132;
-  border: 2px solid #5cc9a7;
-}
-
-.badge.inactive {
-  background-color: #f8d7da;
-  color: #842029;
-  border: 2px solid #e3a1a8;
-}
-.badge {
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
   font-weight: 700;
-  display: inline-block;
-  opacity: 1;
-  filter: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+  opacity: 1 !important;
+  filter: none !important;
+  background: none;
+}
+
+/* Pending */
+.order-status-buttons .status-btn.pending {
+  background-color: #fff3cd !important;
+  color: #856404 !important;
+  border-color: #e6c965 !important;
+}
+
+/* Completed */
+.order-status-buttons .status-btn.completed {
+  background-color: #d1f7e5 !important;
+  color: #0f5132 !important;
+  border-color: #5cc9a7 !important;
+}
+
+/* Cancelled */
+.order-status-buttons .status-btn.cancelled {
+  background-color: #f8d7da !important;
+  color: #842029 !important;
+  border-color: #e3a1a8 !important;
+}
+
+/* Selected status */
+.order-status-buttons .status-btn.active-selected {
+  box-shadow: 0 0 0 3px #000 !important;
+  transform: scale(1.05);
 }
