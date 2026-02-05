@@ -1772,23 +1772,23 @@ body.dark-mode .table th {
 
 /* Pending */
 .order-status-buttons .status-btn.pending {
-  background-color: #fff3cd !important;
+  background-color: #7d6104 !important;
   color: #856404 !important;
-  border-color: #e6c965 !important;
+  border-color: #473a0c !important;
 }
 
 /* Completed */
 .order-status-buttons .status-btn.completed {
-  background-color: #d1f7e5 !important;
+  background-color: #03301b !important;
   color: #0f5132 !important;
-  border-color: #5cc9a7 !important;
+  border-color: #032b1e !important;
 }
 
 /* Cancelled */
 .order-status-buttons .status-btn.cancelled {
-  background-color: #f8d7da !important;
+  background-color: #290306 !important;
   color: #842029 !important;
-  border-color: #e3a1a8 !important;
+  border-color: #35070c !important;
 }
 
 /* Selected status */
