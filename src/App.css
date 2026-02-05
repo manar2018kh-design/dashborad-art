@@ -1758,3 +1758,27 @@ body.dark-mode .table th {
 .view-btn:hover {
   color: #4E1F00;
 }
+
+.badge {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+
+.badge.active {
+  background-color: #d1f7e5;
+  color: #0f5132;
+}
+
+.badge.inactive {
+  background-color: #f8d7da;
+  color: #842029;
+}
