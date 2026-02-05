@@ -1678,3 +1678,83 @@ body.dark-mode .table th {
 .btn-cancel:hover {
   background-color: #6b7280;
 }
+.order-modal {
+  max-width: 650px;
+}
+
+.modal-section {
+  margin-bottom: 20px;
+}
+
+.order-items-title {
+  color: #4E1F00;
+  margin-bottom: 10px;
+}
+
+.order-items-wrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.order-table th {
+  background: linear-gradient(135deg, #d9c7a7, #c9b894);
+  color: #4E1F00;
+  padding: 12px;
+  font-size: 0.85rem;
+}
+
+.order-table td {
+  padding: 12px;
+}
+
+.left { text-align: left; }
+.center { text-align: center; }
+
+.order-status-section {
+  margin: 20px 0;
+  padding-top: 15px;
+  border-top: 2px solid #ebe5c2;
+}
+
+.order-status-title {
+  text-align: center;
+  color: #4E1F00;
+  margin-bottom: 12px;
+}
+
+.order-status-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.status-btn {
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.active-selected {
+  border: 3px solid #000;
+}
+
+.view-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.view-btn:hover {
+  color: #4E1F00;
+}
