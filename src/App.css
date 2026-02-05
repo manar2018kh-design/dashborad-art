@@ -1772,21 +1772,21 @@ body.dark-mode .table th {
 
 /* Pending */
 .order-status-buttons .status-btn.pending {
-  background-color: #7d6104 !important;
+  background-color: #d2a718 !important;
   color: #856404 !important;
   border-color: #473a0c !important;
 }
 
 /* Completed */
 .order-status-buttons .status-btn.completed {
-  background-color: #03301b !important;
+  background-color: #066237 !important;
   color: #0f5132 !important;
-  border-color: #032b1e !important;
+  border-color: #023525 !important;
 }
 
 /* Cancelled */
 .order-status-buttons .status-btn.cancelled {
-  background-color: #290306 !important;
+  background-color: #61070f !important;
   color: #842029 !important;
   border-color: #35070c !important;
 }
