@@ -1767,10 +1767,7 @@ body.dark-mode .table th {
   display: inline-block;
 }
 
-.badge.pending {
-  background-color: #fff3cd;
-  color: #856404;
-}
+
 
 
 .badge.active {
@@ -1781,4 +1778,35 @@ body.dark-mode .table th {
 .badge.inactive {
   background-color: #f8d7da;
   color: #842029;
+}
+.active-selected {
+  box-shadow: 0 0 0 3px #000;
+  transform: scale(1.05);
+  opacity: 1 !important;
+}
+.badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 2px solid #e6c965;
+}
+
+.badge.active {
+  background-color: #d1f7e5;
+  color: #0f5132;
+  border: 2px solid #5cc9a7;
+}
+
+.badge.inactive {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 2px solid #e3a1a8;
+}
+.badge {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-block;
+  opacity: 1;
+  filter: none;
 }
