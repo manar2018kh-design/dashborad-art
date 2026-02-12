@@ -23,7 +23,7 @@ function ProductApi() {
             <table className="table">
                 <thead>
                     <tr>
-                        <th>Image</th>
+                        <th>ID</th>
                         <th>Title</th>
                         <th>Artist Name</th>
                         <th>Price</th>
@@ -35,12 +35,12 @@ function ProductApi() {
                 <tbody>
                     {products.map((product) => (
                         <tr key={product.id}>
-                            <td>{product.image}</td>
+                            <td>{product.id}</td>
                             <td>{product.name}</td>
-                            <td>{product.artistName}</td>
+                            <td>{product.Artist_Name}</td>
                             <td>{product.price}</td>
                             <td>{product.stock}</td>
-                            <td>{product.active ? "Yes" : "No"}</td>
+                            <td>{product.available ? "Yes" : "No"}</td>
                         </tr>
                     ))}
                 </tbody>
