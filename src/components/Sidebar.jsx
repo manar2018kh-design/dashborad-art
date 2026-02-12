@@ -6,6 +6,7 @@ import { IoIosLogOut } from "react-icons/io";
 import { LuBox } from "react-icons/lu";
 import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import { RiArtboardLine } from "react-icons/ri";
+import ProductApi from "./ProductApi";
 import m from "../assets/img/m.png";
 
 function Sidebar({ onLogout }) {
@@ -17,6 +18,7 @@ function Sidebar({ onLogout }) {
     { path: "/api", label: "Art Api", icon: <RiArtboardLine /> },
     { path: "/analytics", label: "Analytics", icon: <TbBrandGoogleAnalytics /> },
     { path: "/settings", label: "Settings", icon: <SettingsSuggestIcon /> },
+    {path: "/productapi", label: "Product Api", icon: <RiArtboardLine /> },
   ];
 
   return (

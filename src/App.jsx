@@ -10,7 +10,7 @@ import CustomerPage from "./components/CustomerPage";
 import AnalyticsPage from "./components/AnalyticsPage";
 import SettingPage from "./components/SettingPage";
 import ArtApi from "./components/ArtApi";
-
+import ProductApi from "./components/ProductApi";
 import { artData } from "./data/data";
 
 export const DarkModeContext = createContext();
@@ -66,6 +66,7 @@ function App() {
             <Route path="analytics" element={<AnalyticsPage />} />
             <Route path="settings" element={<SettingPage />} />
             <Route path="api" element={<ArtApi />} />
+            <Route path="productapi" element={<ProductApi />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/login" />} />
